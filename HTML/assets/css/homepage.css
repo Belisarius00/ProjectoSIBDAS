@@ -43,9 +43,11 @@
     display: inline-block;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 10px;
 }
 
 .menu a {
+    position: relative;
     border: 1px;
     border-radius: 3%;
     margin-left: 10px;
