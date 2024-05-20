@@ -11,100 +11,120 @@
 </head>
 
 <body>
-    <header class="container-fluid border bg-secondary">
-        <a>
-            <img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80"
-                style="vertical-align: middle; margin-left:0px;"></a>
-        <a>Formulário M4</a>
+    <header class="container-fluid bg-secondary">
+        <div class="row">
+            <div class="col-1">
+                <a><img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80"
+                        style="vertical-align: middle; margin-left:0px;"></a>
+            </div>
+            <div class="col-1 ">
+                <a>Formulário M4</a>
+            </div>
+        </div>
     </header>
-    <div class="container-fluid p-2 m-2 mt-3">
+
+    <div class="p-2 m-2 mt-3">
         <form>
-            <div class="border mt-3 p-2 text-centered">
-                <p class="container-fluid">Dados Gerais</p>
-                <a>
-                    <!--<label for="">Nome Completo :</label>-->
-                    <input type="text" name="nome_cliente" minlength="3" maxlength="50" placeholder="Nome Completo"
-                        size="80" required>
-                </a>
-                <a>
-                    <label for="">Data da Avaliação:</label>
-                    <input type="date" name="assessment_date" required>
-                </a>
-                <a>
-                    <label for="">Hora de Avaliação: </label>
-                    <input type="time" name="assessment_time" required>
-                </a>
+            <div class="container-fluid border">
+                <div class="row">
+                    <p>Dados Gerais</p>
+                </div>
+                <div class="row mt-3 p-2 text-justify">
+                    <div class="col text-center">
+                        <a>
+                            <!--<label for="">Nome Completo :</label>-->
+                            <input type="text" name="nome_cliente" minlength="3" maxlength="50"
+                                placeholder="Nome Completo" size="80" required>
+                        </a>
+                    </div>
+                    <div class="col text-center">
+                        <a>
+                            <label for="">Data da Avaliação:</label>
+                            <input type="date" name="assessment_date" required>
+                        </a>
+                    </div>
+                    <div class="col text-center">
+                        <a>
+                            <label for="">Hora de Avaliação: </label>
+                            <input type="time" name="assessment_time" required>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="border mt-3 p-2 text-centered">
-                <p class="container-fluid ">Avaliação das condições física antes do treino</p>
-                <a>
-                    <label for="">Sono :</label>
-                    <input type="number" name="sleep_quality" required>
-                </a>
-                <a>
-                    <label for="">Fadiga :</label>
-                    <input type="number" name="fatigue" required>
-                </a>
-                <a>
-                    <label for="">Dieta :</label>
-                    <input type="number" name="diet_quality" required>
-                </a>
+            <div class="container-fluid border mt-3 p-2 text-justify">
+                <div class="row">
+                    <p>Avaliação das condições física antes do treino</p>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <label for="">Sono :</label>
+                        <input type="number" name="sleep_quality" required>
+                    </div>
+                    <div class="col-4 text-center">
+                        <label for="">Fadiga :</label>
+                        <input type="number" name="fatigue" required>
+                    </div>
+                    <div class="col-4 text-center">
+                        <label for="">Dieta :</label>
+                        <input type="number" name="diet_quality" required>
+                    </div>
+                </div>
             </div>
-            <div class="border mt-3 p-2 text-centered">
-            <p class="container-fluid">Monitorização do Treino</p><br>
-            <table id="exs_treino" class="tables">
-                <thead>
-                    <tr>
-                        <th width="5%">Máquina</th>
-                        <th width="5%">Exercicio</th>
-                        <th width="5%">Número Séries</th>
-                        <th width="15%">Duração</th>
-                        <th width="10%">Cadência</th>
-                        <th width="10%">Carga</th>
-                        <th width="10%">Repouso</th>
-                        <th width="15%">Material</th>
-                        <th width="20%">Observações</th>
-                        <th width="5%"> </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>[maquina]</td>
-                        <td>[exercicio]</td>
-                        <td>[numseries]</td>
-                        <td>[duracao]</td>
-                        <td>[cadence]</td>
-                        <td>[load]</td>
-                        <td>[rest]</td>
-                        <td>[material]</td>
-                        <td>[obs]</td>
-                        <td class="text-center"><a href="#">...</a></td>
-                    </tr>
-                    <tr>
+            <div class="container-fluid border mt-3 p-2 text-justify">
+                <p>Monitorização do Treino</p><br>
+                <table id="exs_treino" class="text-center table-hover">
+                    <thead>
+                        <tr>
+                            <th width="5%">Máquina</th>
+                            <th width="5%">Exercicio</th>
+                            <th width="5%">Número Séries</th>
+                            <th width="15%">Duração</th>
+                            <th width="10%">Cadência</th>
+                            <th width="10%">Carga</th>
+                            <th width="10%">Repouso</th>
+                            <th width="15%">Material</th>
+                            <th width="20%">Observações</th>
+                            <th width="5%"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="maquina" required></td>
+                            <td><input type="text" name="exercicio" required></td>
+                            <td><input type="number" name="numseries" required></td>
+                            <td>[duracao]</td>
+                            <td>[cadence]</td>
+                            <td><input type="number" name="weight" placeholder="Kg" step="2.5" required></td>
+                            <td><input type="number" name="rest" placeholder="s" step="5" required></td>
+                            <td><input type="text" name="material" required></td>
+                            <td><input type="number" name="OBS" placeholder="ES" min="-5" max="5" required></td>
+                            <td class="text-center"><a href="#">...</a></td>
+                        </tr>
                         <td><button type="button" id="addRow">+</button></td>
-                    </tr>
-                </tbody>
-            </table></div><br>
-            <p class="container"> Avaliação final do treino</p>
-            <br>
-            <table class="">
-                <thead>
-                    <th width="10%">PSS</th>
-                    <th width="10%">PSI</th>
-                </thead>
-                <tbody>
-                    <td><input type="number" name="PSS" placeholder="PSS" min="1" max="5" required></td>
-                    <td><input type="number" name="PSI" placeholder="PSI" min="1" max="5" required></td>
-                </tbody>
-            </table>
-            <br>
-            <div class="container-fluid">
-                <a>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container-fluid border mt-3 p-2 text-justify">
+                <p> Avaliação final do treino</p>
+                <table class="text-center">
+                    <thead>
+                        <th width="10%">PSS</th>
+                        <th width="10%">PSI</th>
+                    </thead>
+                    <tbody class="">
+                        <td><input type="number" name="PSS" placeholder="PSS" min="1" max="5" required></td>
+                        <td><input type="number" name="PSI" placeholder="PSI" min="1" max="5" required></td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container-fluid mt-4 text-center">
+                <div class="container-fluid">
                     <label for="">Precisa de um novo plano de treino ?</label>
                     <input type="checkbox" name="novotreino">
-                </a>
+                </div>
             </div>
         </form>
+        <br>
         <button>Submit</button>
         <button>Cancel</button>
     </div>
