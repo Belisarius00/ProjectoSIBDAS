@@ -93,3 +93,45 @@
     border-bottom: 1px dashed #555;
     border-style: dashed;
 }
+
+.posttraineval {
+    margin-left: 40%;
+    margin-right: 40%;
+    border-style: none;
+}
+
+.posttraineval thead {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid#555;
+}
+
+.posttraineval thead th {
+    /*Serve como placeholder para possiveis alterações futuras*/
+    text-align: center;
+}
+
+.posttraineval tbody td {
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.lastquestion {
+    color: #555;
+    /*background-color: #eee;*/
+    width: 98%;
+    /*padding-left: 2%;*/
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+}

@@ -22,35 +22,34 @@
             <div class="inlineblock">
                 <a>
                     <!--<label for="">Nome Completo :</label>-->
-                    <input type="text" name="nome_cliente" minlength="3" maxlength="50" placeholder="Nome Completo"
-                        required size="80">
+                    <input type="text" name="nome_cliente" minlength="3" maxlength="50" placeholder="Nome Completo" size="80" required>
                 </a>
                 <a>
                     <label for="">Data da Avaliação:</label>
-                    <input type="date" name="assessment_date">
+                    <input type="date" name="assessment_date" required>
                 </a>
                 <a>
                     <label for"">Hora de Avaliação: </label>
-                    <input type="time" name="assessment_time">
+                    <input type="time" name="assessment_time" required>
                 </a>
             </div>
             <p class="headers">Avaliação das condições física antes do treino</p>
             <div class="inlineblock">
                 <a>
                     <label for="">Sono :</label>
-                    <input type="number" name="sleep_quality">
+                    <input type="number" name="sleep_quality" required>
                 </a>
                 <a>
                     <label for="">Fadiga :</label>
-                    <input type="number" name="fatigue">
+                    <input type="number" name="fatigue" required>
                 </a>
                 <a>
                     <label for="">Dieta :</label>
-                    <input type="number" name="diet_quality">
+                    <input type="number" name="diet_quality" required>
                 </a>
             </div>
             <p class="headers">Monitorização do Treino</p><br>
-            <table class="tables">
+            <table id="exs_treino" class="tables">
                 <thead>
                     <tr>
                         <th width="5%">Máquina</th>
@@ -78,10 +77,35 @@
                         <td>[obs]</td>
                         <td class="text-center"><a href="#">...</a></td>
                     </tr>
+                    <tr>
+                        <td><button type="button" id="addRow">+</button></td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <p class="headers"> Avaliação final do treino</p>
+            <br>
+            <table class="posttraineval">
+                <thead>
+                    <th width="10%">PSS</th>
+                    <th width="10%">PSI</th>
+                </thead>
+                <tbody>
+                    <td><input type="number" name="PSS" placeholder="PSS" min="1" max="5" required></td>
+                    <td><input type="number" name="PSI" placeholder="PSI" min="1" max="5" required></td>
                 </tbody>
             </table>
+            <br>
+            <div class="lastquestion">
+                <a>
+                    <label for="">Precisa de um novo plano de treino ?</label>
+                    <input type="checkbox" name="novotreino">
+                </a>
+            </div>
         </form>
+        <button>Submit</button>
+        <button>Cancel</button>
     </div>
+    <script src="assets/js/form.js"></script>
 </body>
 
 </html>
