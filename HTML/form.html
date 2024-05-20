@@ -19,8 +19,8 @@
     </header>
     <div class="container-fluid p-2 m-2 mt-3">
         <form>
-            <p class="container-fluid">Dados Gerais</p>
-            <div class="inlineblock">
+            <div class="border mt-3 p-2 text-centered">
+                <p class="container-fluid">Dados Gerais</p>
                 <a>
                     <!--<label for="">Nome Completo :</label>-->
                     <input type="text" name="nome_cliente" minlength="3" maxlength="50" placeholder="Nome Completo"
@@ -31,12 +31,12 @@
                     <input type="date" name="assessment_date" required>
                 </a>
                 <a>
-                    <label for"">Hora de Avaliação: </label>
+                    <label for="">Hora de Avaliação: </label>
                     <input type="time" name="assessment_time" required>
                 </a>
             </div>
-            <p class="container-fluid">Avaliação das condições física antes do treino</p>
-            <div class="inlineblock">
+            <div class="border mt-3 p-2 text-centered">
+                <p class="container-fluid ">Avaliação das condições física antes do treino</p>
                 <a>
                     <label for="">Sono :</label>
                     <input type="number" name="sleep_quality" required>
@@ -50,6 +50,7 @@
                     <input type="number" name="diet_quality" required>
                 </a>
             </div>
+            <div class="border mt-3 p-2 text-centered">
             <p class="container-fluid">Monitorização do Treino</p><br>
             <table id="exs_treino" class="tables">
                 <thead>
@@ -83,7 +84,7 @@
                         <td><button type="button" id="addRow">+</button></td>
                     </tr>
                 </tbody>
-            </table><br>
+            </table></div><br>
             <p class="container"> Avaliação final do treino</p>
             <br>
             <table class="">
