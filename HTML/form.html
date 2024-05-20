@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário M4</title>
-    <link rel="stylesheet" href="assets/css/formstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <header class="header">
+    <header class="container-fluid border bg-secondary">
         <a>
-            <a><img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80" style="vertical-align: middle; margin-left:0px;"></a>
-        </a>
+            <img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80"
+                style="vertical-align: middle; margin-left:0px;"></a>
         <a>Formulário M4</a>
     </header>
-    <div class="body">
+    <div class="container-fluid p-2 m-2 mt-3">
         <form>
-            <p class="headers">Dados Gerais</p>
+            <p class="container-fluid">Dados Gerais</p>
             <div class="inlineblock">
                 <a>
                     <!--<label for="">Nome Completo :</label>-->
-                    <input type="text" name="nome_cliente" minlength="3" maxlength="50" placeholder="Nome Completo" size="80" required>
+                    <input type="text" name="nome_cliente" minlength="3" maxlength="50" placeholder="Nome Completo"
+                        size="80" required>
                 </a>
                 <a>
                     <label for="">Data da Avaliação:</label>
@@ -33,7 +35,7 @@
                     <input type="time" name="assessment_time" required>
                 </a>
             </div>
-            <p class="headers">Avaliação das condições física antes do treino</p>
+            <p class="container-fluid">Avaliação das condições física antes do treino</p>
             <div class="inlineblock">
                 <a>
                     <label for="">Sono :</label>
@@ -48,7 +50,7 @@
                     <input type="number" name="diet_quality" required>
                 </a>
             </div>
-            <p class="headers">Monitorização do Treino</p><br>
+            <p class="container-fluid">Monitorização do Treino</p><br>
             <table id="exs_treino" class="tables">
                 <thead>
                     <tr>
@@ -82,9 +84,9 @@
                     </tr>
                 </tbody>
             </table><br>
-            <p class="headers"> Avaliação final do treino</p>
+            <p class="container"> Avaliação final do treino</p>
             <br>
-            <table class="posttraineval">
+            <table class="">
                 <thead>
                     <th width="10%">PSS</th>
                     <th width="10%">PSI</th>
@@ -95,7 +97,7 @@
                 </tbody>
             </table>
             <br>
-            <div class="lastquestion">
+            <div class="container-fluid">
                 <a>
                     <label for="">Precisa de um novo plano de treino ?</label>
                     <input type="checkbox" name="novotreino">
