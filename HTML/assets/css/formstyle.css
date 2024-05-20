@@ -1,0 +1,95 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+    background-color: #bbb;
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.body {
+    margin-left: 2%;
+    margin-right: 2%;
+    /*border-style: dotted;*/
+}
+
+.header a{
+    display: inline;
+    vertical-align: middle;
+}
+
+.headers {
+    color: #555;
+    background-color: #eee;
+    width: 98%;
+    height: 40px;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-left: 2%;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.inlineblock {
+    color: #111;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: middle;
+}
+
+.inlineblock a {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.inlineblock a label {
+    color: #555;
+}
+
+.tables {
+    margin-left: 3%;
+    margin-right: 3%;
+    border-style: dotted;
+    border-radius: 3%;
+    border-color: #bbb;
+}
+
+.tables thead {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tables thead tr th{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid#555;
+    border-style: solid;
+}
+
+.tables tbody tr td{
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px dashed #555;
+    border-style: dashed;
+}

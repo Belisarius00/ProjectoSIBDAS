@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário M4</title>
+    <link rel="stylesheet" href="assets/css/formstyle.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <a>
+            <a><img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80" style="vertical-align: middle; margin-left:0px;"></a>
+        </a>
+        <a>Formulário M4</a>
+    </header>
+    <div class="body">
+        <form>
+            <p class="headers">Dados Gerais</p>
+            <div class="inlineblock">
+                <a>
+                    <!--<label for="">Nome Completo :</label>-->
+                    <input type="text" name="nome_cliente" minlength="3" maxlength="50" placeholder="Nome Completo"
+                        required size="80">
+                </a>
+                <a>
+                    <label for="">Data da Avaliação:</label>
+                    <input type="date" name="assessment_date">
+                </a>
+                <a>
+                    <label for"">Hora de Avaliação: </label>
+                    <input type="time" name="assessment_time">
+                </a>
+            </div>
+            <p class="headers">Avaliação das condições física antes do treino</p>
+            <div class="inlineblock">
+                <a>
+                    <label for="">Sono :</label>
+                    <input type="number" name="sleep_quality">
+                </a>
+                <a>
+                    <label for="">Fadiga :</label>
+                    <input type="number" name="fatigue">
+                </a>
+                <a>
+                    <label for="">Dieta :</label>
+                    <input type="number" name="diet_quality">
+                </a>
+            </div>
+            <p class="headers">Monitorização do Treino</p><br>
+            <table class="tables">
+                <thead>
+                    <tr>
+                        <th width="5%">Máquina</th>
+                        <th width="5%">Exercicio</th>
+                        <th width="5%">Número Séries</th>
+                        <th width="15%">Duração</th>
+                        <th width="10%">Cadência</th>
+                        <th width="10%">Carga</th>
+                        <th width="10%">Repouso</th>
+                        <th width="15%">Material</th>
+                        <th width="20%">Observações</th>
+                        <th width="5%"> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[maquina]</td>
+                        <td>[exercicio]</td>
+                        <td>[numseries]</td>
+                        <td>[duracao]</td>
+                        <td>[cadence]</td>
+                        <td>[load]</td>
+                        <td>[rest]</td>
+                        <td>[material]</td>
+                        <td>[obs]</td>
+                        <td class="text-center"><a href="#">...</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
