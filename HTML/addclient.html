@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Cliente</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+</head>
+
+<body>
+    <header class="container-fluid bng-navbar">
+        <div class="row justify-content align-items-center" style="background-color: #aaa; color: #444">
+            <div class="col-1 d-block">
+                <a><img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80"
+                        style="vertical-align: middle; margin-left:0px;"></a>
+            </div>
+            <div class="col-10 text-left">
+                <h3>Adicionar Cliente</h3>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="container-fluid border m-3">
+                        <div class="row p-2 text-justify">
+                            <div class="col-8 text-center">
+                                <a>
+                                    <input type="text" name="nome_cliente" minlength="3" maxlength="80"
+                                        placeholder="Nome Completo" size="120" required>
+                                </a>
+                            </div>
+                            <div class="col-4 text-center">
+                                <a>
+                                    <label for="">Idade :</label>
+                                    <input type="number" name="clientage" placeholder="Anos" step="1" required>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row p-2 text-justify">
+                            <div class="col-4 text-center">
+                                <a>
+                                    <label for="">Número de Telemóvel :</label>
+                                    <input type="tel" name="clienttelephone" size="9" required>
+                                </a>
+                            </div>
+                            <div class="col-8 text-center">
+                                <a>
+                                    <label for="">E-mail :</label>
+                                    <input type="email" name="clientmail" size="50">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid border mt-3 p-2 text-justify">
+                        <div class="row p-2">
+                            <div class="col text-center">
+                                <a>
+                                    <label for="">Altura :</label>
+                                    <input type="number" name="clientheight" placeholder="m" step="0.01" required>
+                                </a>
+                            </div>
+                            <div class="col text-center">
+                                <a>
+                                    <label for="">Peso :</label>
+                                    <input type="number" name="clientweight" placeholder="Kg" min="0" step="0.5"
+                                        required>
+                                </a>
+                            </div>
+                            <div class="col text-center">
+                                <a>
+                                    <label for="clientsex">Sexo:</label>
+                                    <select name="clientsex" id="clientsex">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="delusional">Delusional</option>
+                                    </select>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid border mt-3 p-2  text-justify">
+                        <h4> Avaliação final do treino</h4>
+                        <table class="text-center">
+                            <thead>
+                                <th width="10%">PSS</th>
+                                <th width="10%">PSI</th>
+                            </thead>
+                            <tbody class="">
+                                <td><input type="number" name="PSS" placeholder="PSS" min="1" max="5" required></td>
+                                <td><input type="number" name="PSI" placeholder="PSI" min="1" max="5" required></td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container-fluid mt-4 text-center">
+                        <div class="container-fluid">
+                            <label for="">Precisa de um novo plano de treino ?</label>
+                            <input type="checkbox" name="novotreino">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <a href="">
+                    <button type="submit">Submit</button>
+                </a>
+            </div>
+            <div class="col-1">
+                <a href="homepage.html">
+                    <button> Cancel</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-bottom text-center p-3 footer" style="background-color: #444; color:#ddd">
+        Lorem Ipsum Gym &copy; 2024 Todos os direitos reservados.
+    </div>
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
