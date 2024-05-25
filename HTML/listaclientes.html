@@ -86,13 +86,43 @@
                 </div>
             </nav>
             <div class="col-10">
-                <script src="assets/js/listclients.js"></script>
+                <div class="container mt-5">
+                    <div class="row" id="client-list"></div>
+                </div>
             </div>
         </div>
     </div>
     <div class="fixed-bottom text-center p-3 footer" style="background-color: #444; color:#ddd">
         Lorem Ipsum Gym &copy; 2024 Todos os direitos reservados.
     </div>
+    <script>
+        const placeholderClients = [
+            { client_id: 1, client_name: "John Doe", age: 30, phone: "123-456-7890", email: "john.doe@example.com" },
+            { client_id: 2, client_name: "Jane Smith", age: 25, phone: "234-567-8901", email: "jane.smith@example.com" },
+            { client_id: 3, client_name: "Mike Johnson", age: 40, phone: "345-678-9012", email: "mike.johnson@example.com" },
+            { client_id: 4, client_name: "Mike Hawk", age: 31, phone: "123-456-7890", email: "john.doe@example.com" },
+            { client_id: 5, client_name: "Hugh Mungus", age: 26, phone: "234-567-8901", email: "jane.smith@example.com" },
+            { client_id: 6, client_name: "Michael Jackson", age: 41, phone: "345-678-9012", email: "mike.johnson@example.com" }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const clientList = document.getElementById('client-list');
+            placeholderClients.forEach(client => {
+                const clientCard = document.createElement('div');
+                clientCard.className = 'col-md-4';
+                clientCard.innerHTML = `
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">${client.client_name}</h5>
+                            <p class="card-text">ID: ${client.client_id}</p>
+                            <a href="detalhescliente.html?id=${client.client_id}" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                `;
+                clientList.appendChild(clientCard);
+            });
+        });
+    </script>
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cliente</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+</head>
+
+<body>
+    <header class="container-fluid bng-navbar">
+        <div class="row justify-content align-items-center" style="background-color: #aaa; color: #444">
+            <div class="col-1 d-block">
+                <a><img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80"
+                        style="vertical-align: middle; margin-left:0px;"></a>
+            </div>
+            <div class="col-10 text-left">
+                <h3>Detalhes do Cliente</h3>
+            </div>
+            <div class="col-1 text-end p-2">
+                <button class="btn btn-secondary" type="button" aria-expanded="false">
+                    <a href="listaclientes.html" class="btn btn-secondary">Back</a>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-8 p-1 pb-1">
+                <div class="container-fluid border">
+                    <h4>Dados do Cliente</h4>
+                    <h6 id="client-name" class="mb-4"></h6>
+                    <div id="client-details"></div>
+                    <!-- the rest of client's data goes here (BMI, Age, weight, contacts, etc...) also needs formatting -->
+                </div>
+            </div>
+            <div class="col-4 p-1 pb-1 d-flex">
+                <div class="container-fluid border">
+                    <h4> Marcações</h4>
+                    Future appointments list goes here
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 p-1 pt-1">
+                <div class="container-fluid border">
+                    <h4>Avaliações</h4>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="container">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th width="15%">Avaliação</th>
+                                            <th width="70%">Data</th>
+                                            <th width="15%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="assessment-list">
+                                        <!-- lista de avaliações aparece aqui -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            client evolution graph to be implemented here
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-bottom text-center p-3 footer" style="background-color: #444; color:#ddd">
+        Lorem Ipsum Gym &copy; 2024 Todos os direitos reservados.
+    </div>
+    <script>
+        const placeholderClients = [
+            { client_id: 1, client_name: "John Doe", age: 30, phone: "123-456-7890", email: "john.doe@example.com" },
+            { client_id: 2, client_name: "Jane Smith", age: 25, phone: "234-567-8901", email: "jane.smith@example.com" },
+            { client_id: 3, client_name: "Mike Johnson", age: 40, phone: "345-678-9012", email: "mike.johnson@example.com" },
+            { client_id: 4, client_name: "Mike Hawk", age: 31, phone: "123-456-7890", email: "john.doe@example.com" },
+            { client_id: 5, client_name: "Hugh Mungus", age: 26, phone: "234-567-8901", email: "jane.smith@example.com" },
+            { client_id: 6, client_name: "Michael Jackson", age: 41, phone: "345-678-9012", email: "mike.johnson@example.com" }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const clientId = parseInt(urlParams.get('id'));
+
+            const client = placeholderClients.find(client => client.client_id === clientId);
+            if (client) {
+                document.getElementById('client-name').innerText = client.client_name;
+                document.getElementById('client-details').innerHTML = `
+                    <p>ID: ${client.client_id}</p>
+                    <p>Age: ${client.age}</p>
+                    <p>Phone: ${client.phone}</p>
+                    <p>Email: ${client.email}</p>
+                `;
+            } else {
+                document.getElementById('client-details').innerText = 'Client not found.';
+            }
+        });
+    </script>
+    <script>
+        const placeholderAssessments = [
+            { assessment_id: 1, assessment_date: "24-05-2024" },
+        ];
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const assessmentList = document.getElementById('assessment-list');
+            placeholderAssessments.forEach(assessment => {
+                const assessmentRow = document.createElement('tr');
+                assessmentRow.innerHTML = `
+                    <td>${assessment.assessment_id}</td>
+                    <td>${assessment.assessment_date}</td>
+                    <td><a href="assessments.html?id=${assessment.assessment_id}" class="btn btn-secondary">View Details</a></td>
+                `;
+                assessmentList.appendChild(assessmentRow);
+            });
+        });
+    </script>
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
