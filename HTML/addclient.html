@@ -22,99 +22,89 @@
         </div>
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
         <div class="row">
             <div class="col">
                 <form>
                     <div class="container-fluid border m-3">
-                        <div class="row p-2 text-justify">
-                            <div class="col-8 text-center">
-                                <a>
-                                    <input type="text" name="nome_cliente" minlength="3" maxlength="80"
-                                        placeholder="Nome Completo" size="120" required>
-                                </a>
-                            </div>
-                            <div class="col-4 text-center">
-                                <a>
-                                    <label for="">Idade :</label>
-                                    <input type="number" name="clientage" placeholder="Anos" step="1" required>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row p-2 text-justify">
-                            <div class="col-4 text-center">
-                                <a>
-                                    <label for="">Número de Telemóvel :</label>
-                                    <input type="tel" name="clienttelephone" size="9" required>
-                                </a>
-                            </div>
-                            <div class="col-8 text-center">
-                                <a>
-                                    <label for="">E-mail :</label>
-                                    <input type="email" name="clientmail" size="50">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid border mt-3 p-2 text-justify">
                         <div class="row p-2">
-                            <div class="col text-center">
-                                <a>
-                                    <label for="">Altura :</label>
-                                    <input type="number" name="clientheight" placeholder="m" step="0.01" required>
-                                </a>
+                            <div class="col-8">
+                                <div class="mb-3">
+                                    <label for="nome_cliente" class="form-label">Nome Completo</label>
+                                    <input type="text" id="nome_cliente" name="nome_cliente" minlength="3" maxlength="80"
+                                           placeholder="Nome Completo" class="form-control" required>
+                                </div>
                             </div>
-                            <div class="col text-center">
-                                <a>
-                                    <label for="">Peso :</label>
-                                    <input type="number" name="clientweight" placeholder="Kg" min="0" step="0.5"
-                                        required>
-                                </a>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="clientage" class="form-label">Idade</label>
+                                    <input type="number" id="clientage" name="clientage" placeholder="Anos" step="1" class="form-control" required>
+                                </div>
                             </div>
-                            <div class="col text-center">
-                                <a>
-                                    <label for="clientsex">Sexo:</label>
-                                    <select name="clientsex" id="clientsex">
+                        </div>
+                        <div class="row p-2">
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="clienttelephone" class="form-label">Número de Telemóvel</label>
+                                    <input type="tel" id="clienttelephone" name="clienttelephone" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="mb-3">
+                                    <label for="clientmail" class="form-label">E-mail</label>
+                                    <input type="email" id="clientmail" name="clientmail" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="clientheight" class="form-label">Altura</label>
+                                    <input type="number" id="clientheight" name="clientheight" placeholder="m" step="0.01" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="clientweight" class="form-label">Peso</label>
+                                    <input type="number" id="clientweight" name="clientweight" placeholder="Kg" min="0" step="0.5" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="clientsex" class="form-label">Sexo</label>
+                                    <select name="clientsex" id="clientsex" class="form-select">
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
-                                        <option value="delusional">Delusional</option>
                                     </select>
-                                </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container-fluid border mt-3 p-2  text-justify">
-                        <h4> Avaliação final do treino</h4>
-                        <table class="text-center">
-                            <thead>
-                                <th width="10%">PSS</th>
-                                <th width="10%">PSI</th>
-                            </thead>
-                            <tbody class="">
-                                <td><input type="number" name="PSS" placeholder="PSS" min="1" max="5" required></td>
-                                <td><input type="number" name="PSI" placeholder="PSI" min="1" max="5" required></td>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="container-fluid mt-4 text-center">
-                        <div class="container-fluid">
-                            <label for="">Precisa de um novo plano de treino ?</label>
-                            <input type="checkbox" name="novotreino">
+                        <div class="row p-2">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="obs" class="form-label">Observações e Contraindicações médicas</label>
+                                    <textarea id="obs" name="obs" rows="5" placeholder="Observações" class="form-control m-1"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2">
+                            <div class="col-12">
+                                <div class="mb-3 border p-2">
+                                    <h4>Ficheiros Adicionais</h4>
+                                    <input type="file" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2 mb-6">
+                            <div class="col-6 text-end">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <div class="col-6 text-start">
+                                <a href="homepage.html" class="btn btn-secondary">Cancel</a>
+                            </div>
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1">
-                <a href="">
-                    <button type="submit">Submit</button>
-                </a>
-            </div>
-            <div class="col-1">
-                <a href="homepage.html">
-                    <button> Cancel</button>
-                </a>
             </div>
         </div>
     </div>
