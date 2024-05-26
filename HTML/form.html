@@ -87,11 +87,13 @@
                                     <td><input type="text" class="form-control" name="maquina" required></td>
                                     <td><input type="text" class="form-control" name="exercicio" required></td>
                                     <td><input type="number" class="form-control" name="numseries" required></td>
-                                    <td><input type="time" class="form-control" name="duracao" required></td>
+                                    <td><input type="text" class="form-control duration-input" name="duracao"
+                                            placeholder="mm:ss" required></td>
                                     <td><input type="text" class="form-control" name="cadencia" required></td>
                                     <td><input type="number" class="form-control" name="weight" placeholder="Kg"
                                             step="2.5" min="0" required></td>
-                                    <td><input type="time" class="form-control" name="rest" required></td>
+                                    <td><input type="text" class="form-control duration-input" name="rest"
+                                            placeholder="mm:ss" required></td>
                                     <td><input type="text" class="form-control" name="material" required></td>
                                     <td><input type="text" class="form-control" name="OBS" placeholder="Observações"
                                             required></td>
@@ -136,6 +138,7 @@
     </div>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/formrows.js"></script>
+    <script src="assets/js/timecheck.js"></script>
 </body>
 
 </html>
