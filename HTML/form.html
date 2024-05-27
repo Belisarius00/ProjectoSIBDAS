@@ -27,21 +27,7 @@
             <div class="container-fluid border p-3">
                 <div class="row mb-3">
                     <h4>Dados Gerais</h4>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-md-4">
-                        <label for="nome_cliente" class="form-label">Nome Completo:</label>
-                        <input type="text" class="form-control" id="nome_cliente" name="nome_cliente" minlength="3"
-                            maxlength="50" placeholder="Nome Completo" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="assessment_date" class="form-label">Data da Avaliação:</label>
-                        <input type="date" class="form-control" id="assessment_date" name="assessment_date" required>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="assessment_time" class="form-label">Hora de Avaliação:</label>
-                        <input type="time" class="form-control" id="assessment_time" name="assessment_time" required>
-                    </div>
+                    <div id="assessment-details"></div>
                 </div>
             </div>
             <div class="container-fluid border mt-3 p-3">
@@ -139,6 +125,7 @@
     <script src="assets/js/form.js"></script>
     <script src="assets/js/formrows.js"></script>
     <script src="assets/js/timecheck.js"></script>
+    <script src="assets/js/futureassessments.js"></script>
 </body>
 
 </html>
