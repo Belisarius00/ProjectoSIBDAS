@@ -1,5 +1,6 @@
 const placeholderAssessments = [
     { assessment_id: 1, assessment_date: "24-05-2024", assessment_hour: "12:30" },
+    { assessment_id: 1, assessment_date: "24-05-2024", assessment_hour: "12:30" },
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
