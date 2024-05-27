@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+</head>
+<body>
+    <header class="container-fluid bng-navbar">
+        <div class="row justify-content align-items-center" style="background-color: #aaa; color: #444">
+            <div class="col-1 d-block">
+                <a href="homepage.html">
+                    <img src="assets/images/logo.jpeg" alt="Logo Empresa" title="ISEP Clinica" width="80" height="80"
+                        style="vertical-align: middle; margin-left:0px;"></a>
+            </div>
+            <div class="col-10 text-left">
+                <h3>Lista de Clientes</h3>
+            </div>
+            <div class="col-1 text-end p-1">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-regular fa-user me-2"></i> Admin
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key me-2"></i>Alterar password</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="login.html"><i
+                                    class="fa-solid fa-right-from-bracket me-2"></i>Sair</a></li>
+                    </ul>
+                </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-10">
+                <div class="container mt-5">
+                    <div class="row" id="assessment-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-bottom text-center p-3 footer" style="background-color: #444; color:#ddd">
+        Lorem Ipsum Gym &copy; 2024 Todos os direitos reservados.
+    </div>
+    <script src="assets/js/listclients.js"></script>
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
